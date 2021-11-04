@@ -1,4 +1,4 @@
-**This repo is to evaluate inference speed of RGANet and other segmentation algorithms on Suction Dataset and present their qualitative results.**
+###  **This repo is to evaluate inference speed of RGANet and other segmentation algorithms on Suction Dataset and present their qualitative results. Official RGANet-NB runtime test demo can be found** [here](https://github.com/dunknowcoding/RGANet-test).
 
 ## Dataset
 * Download [Suction dataset](http://arc.cs.princeton.edu)
@@ -51,16 +51,17 @@ Below is our results on v100.
 | **RGA_NB (ours)**     | 3.413      | 7.854   | 7.5080              |
 
 #### 1.2 Visualization
-|                       | 000009-0 | 000044-0 | 000574-1 | 001164-1 |
-|-----------------------|--------|--------|--------|--------|
-| color input           |![](images/000009-0.png)        |![](images/000044-0.png)        |![](images/000574-1.png)        |![](images/001164-1.png)        |
-| ground truth          |![](images/gt_000009-0.png)     |![](images/gt_000044-0.png)     |![](images/gt_000574-1.png)     |![](images/gt_001164-1.png)     |
-| CCNet                 |![](images/ccnet_2.png)         |![](images/ccnet_9.png)         |![](images/ccnet_115.png)       |![](images/ccnet_233.png)        |
-| fcn - resnet50        |![](images/FCN_resnet50_2.png)  |![](images/FCN_resnet50_9.png)  |![](images/FCN_resnet50_115.png)|![](images/FCN_resnet50_233.png) |
-| fcn - resnet101       |![](images/FCN_resnet101_2.png) |![](images/FCN_resnet101_9.png) |![](images/FCN_resnet101_115.png)|![](images/FCN_resnet101_233.png)  |
-| deeplab - resnet50    |![](images/DeepLabv3_resnet50_2.png)  |![](images/DeepLabv3_resnet50_9.png)  |![](images/DeepLabv3_resnet50_115.png)  |![](images/DeepLabv3_resnet50_233.png)  |
-| deeplab - resnet101    |![](images/Deeplabv3_resnet101_2.png)  |![](images/Deeplabv3_resnet101_9.png)  |![](images/Deeplabv3_resnet101_115.png)  |![](images/Deeplabv3_resnet101_233.png)  |
-| **RGA_NB (ours)**      |![](images/RGANet_NB_2.png)    |![](images/RGANet_NB_9.png)  |![](images/RGANet_NB_115.png)      |![](images/RGANet_NB_233.png)        |
+|                       | 000009-0 | 000044-0 | 000574-1 | 001164-1 | 000304-0 | 000764-1 |
+|-----------------------|--------|--------|--------|--------|--------|--------|
+| color input           |![](images/000009-0.png) |![](images/000044-0.png)  |![](images/000574-1.png)   |![](images/001164-1.png)   |![](images/000304-0.png)        |![](images/000764-1.png)        |
+| ground truth          |![](images/gt_000009-0.png) |![](images/gt_000044-0.png)  |![](images/gt_000574-1.png)   |![](images/gt_001164-1.png)   |![](images/gt_000304-0.png)        |![](images/gt_000764-1.png)        |
+| CCNet                 |![](images/ccnet_2.png)         |![](images/ccnet_9.png)      |![](images/ccnet_115.png)       |![](images/ccnet_233.png)        |![](images/ccnet_61.png)       |![](images/ccnet_153.png)        |
+| fcn - resnet50        |![](images/FCN_resnet50_2.png)  |![](images/FCN_resnet50_9.png)  |![](images/FCN_resnet50_115.png)|![](images/FCN_resnet50_233.png) |![](images/FCN_resnet50_61.png)|![](images/FCN_resnet50_153.png) |
+| fcn - resnet101       |![](images/FCN_resnet101_2.png) |![](images/FCN_resnet101_9.png) |![](images/FCN_resnet101_115.png)|![](images/FCN_resnet101_233.png)  |![](images/FCN_resnet101_61.png)|![](images/FCN_resnet101_153.png)  |
+| deeplab - resnet50    |![](images/DeepLabv3_resnet50_2.png)  |![](images/DeepLabv3_resnet50_9.png)  |![](images/DeepLabv3_resnet50_115.png)  |![](images/DeepLabv3_resnet50_233.png)  |![](images/DeepLabv3_resnet50_61.png)  |![](images/DeepLabv3_resnet50_153.png)  |
+| deeplab - resnet101    |![](images/Deeplabv3_resnet101_2.png)  |![](images/Deeplabv3_resnet101_9.png)  |![](images/Deeplabv3_resnet101_115.png)  |![](images/Deeplabv3_resnet101_233.png)  |![](images/Deeplabv3_resnet101_61.png)  |![](images/Deeplabv3_resnet101_153.png)  |
+| BiSeNetv1              |![](images/BiSeNetv1_2.png)         |![](images/BiSeNetv1_9.png)      |![](images/BiSeNetv1_115.png)       |![](images/BiSeNetv1_233.png)        |![](images/BiSeNetv1_61.png)       |![](images/BiSeNetv1_153.png)        |
+| **RGA_NB (ours)**      |![](images/RGANet_NB_2.png)    |![](images/RGANet_NB_9.png)  |![](images/RGANet_NB_115.png)      |![](images/RGANet_NB_233.png)        |![](images/RGANet_NB_61.png)      |![](images/RGANet_NB_153.png)        |
 
 
 ### 2. Compared with smaller models
@@ -76,17 +77,17 @@ Below is our results on v100.
 | **RGA_NB (ours)**     | 3.413      | 7.854   | 7.5080              |
 
 #### 2.2 Visualization
-|                       | 000009-0 | 000044-0 | 000574-1 | 001164-1 |
-|-----------------------|--------|--------|--------|--------|
-| color input           |![](images/000009-0.png)        |![](images/000044-0.png)        |![](images/000574-1.png)        |![](images/001164-1.png)        |
-| ground truth          |![](images/gt_000009-0.png)     |![](images/gt_000044-0.png)     |![](images/gt_000574-1.png)     |![](images/gt_001164-1.png)     |
-| deeplabv3 mobilenetv2 |![](images/deeplabv3_mobilenetv2_2.png) |![](images/deeplabv3_mobilenetv2_9.png)    |![](images/deeplabv3_mobilenetv2_115.png)       |![](images/deeplabv3_mobilenetv2_233.png)        |
-| DDRNet-23-slim        |![](images/DDRNet_2.png) |![](images/DDRNet_9.png) |![](images/DDRNet_115.png)|![](images/DDRNet_233.png)  |
-| HRnet-w18-small-v1    |![](images/HRNet_2.png)  |![](images/HRNet_9.png)  |![](images/HRNet_115.png)  |![](images/HRNet_233.png)  |
-| HarDNet               |![](images/HARDNet_2.png)  |![](images/HARDNet_9.png)  |![](images/HARDNet_115.png)  |![](images/HARDNet_233.png)  |
-| ShelfNet18            |![](images/ShelfNet_2.png)  |![](images/ShelfNet_9.png)  |![](images/ShelfNet_115.png)  |![](images/ShelfNet_233.png)  |
-| STDC1                 |![](images/stdc_2.png)  |![](images/stdc_9.png)  |![](images/stdc_115.png)  |![](images/stdc_233.png)  |
-| **RGA_NB (ours)**      |![](images/RGANet_NB_2.png)    |![](images/RGANet_NB_9.png)  |![](images/RGANet_NB_115.png)      |![](images/RGANet_NB_233.png)        |
+|                       | 000009-0 | 000044-0 | 000574-1 | 001164-1 | 000304-0 | 000764-1 |
+|-----------------------|--------|--------|--------|--------|--------|--------|
+| color input           |![](images/000009-0.png) |![](images/000044-0.png)  |![](images/000574-1.png)   |![](images/001164-1.png)   |![](images/000304-0.png)        |![](images/000764-1.png)        |
+| ground truth          |![](images/gt_000009-0.png) |![](images/gt_000044-0.png)  |![](images/gt_000574-1.png)   |![](images/gt_001164-1.png)   |![](images/gt_000304-0.png)        |![](images/gt_000764-1.png)        |
+| deeplabv3 mobilenetv2 |![](images/deeplabv3_mobilenetv2_2.png) |![](images/deeplabv3_mobilenetv2_9.png)    |![](images/deeplabv3_mobilenetv2_115.png)       |![](images/deeplabv3_mobilenetv2_233.png)        |![](images/deeplabv3_mobilenetv2_61.png)       |![](images/deeplabv3_mobilenetv2_153.png)        |
+| DDRNet-23-slim        |![](images/DDRNet_2.png) |![](images/DDRNet_9.png) |![](images/DDRNet_115.png)|![](images/DDRNet_233.png)  |![](images/DDRNet_61.png)|![](images/DDRNet_153.png)  |
+| HRnet-w18-small-v1    |![](images/HRNet_2.png)  |![](images/HRNet_9.png)  |![](images/HRNet_115.png)  |![](images/HRNet_233.png)  |![](images/HRNet_61.png)  |![](images/HRNet_153.png)  |
+| HarDNet               |![](images/HARDNet_2.png)  |![](images/HARDNet_9.png)  |![](images/HARDNet_115.png)  |![](images/HARDNet_233.png)  |![](images/HARDNet_61.png)  |![](images/HARDNet_153.png)  |
+| ShelfNet18            |![](images/ShelfNet_2.png)  |![](images/ShelfNet_9.png)  |![](images/ShelfNet_115.png)  |![](images/ShelfNet_233.png)  |![](images/ShelfNet_61.png)  |![](images/ShelfNet_153.png)  |
+| STDC1                 |![](images/stdc_2.png)  |![](images/stdc_9.png)  |![](images/stdc_115.png)  |![](images/stdc_233.png)  |![](images/stdc_61.png)  |![](images/stdc_153.png)  |
+| **RGA_NB (ours)**      |![](images/RGANet_NB_2.png)    |![](images/RGANet_NB_9.png)  |![](images/RGANet_NB_115.png)      |![](images/RGANet_NB_233.png)        |![](images/RGANet_NB_61.png)      |![](images/RGANet_NB_153.png)        |
 
 
 ## Reference
@@ -99,3 +100,4 @@ Below is our results on v100.
 * [7] Fan, Mingyuan, et al. "Rethinking BiSeNet For Real-time Semantic Segmentation." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021. [official code](https://github.com/MichaelFan01/STDC-Seg)
 * [8] Hong, Yuanduo, et al. "Deep dual-resolution networks for real-time and accurate semantic segmentation of road scenes." arXiv preprint arXiv:2101.06085 (2021). [official code](https://github.com/ydhongHIT/DDRNet)
 * [9] Howard, Andrew, et al. "Searching for mobilenetv3." Proceedings of the IEEE/CVF International Conference on Computer Vision. 2019.
+* [10] Yu, Changqian, et al. "Bisenet: Bilateral segmentation network for real-time semantic segmentation." Proceedings of the European conference on computer vision (ECCV). 2018.
