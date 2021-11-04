@@ -1,0 +1,13 @@
+torch 
+torchvision 
+torchaudio 
+setuptools-scm 
+tensorboardX 
+pillow 
+scipy
+opencv-python 
+tqdm
+thop
+yacs
+six
+matplotlib
