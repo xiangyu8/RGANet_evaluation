@@ -38,24 +38,55 @@ sh run_test.sh
 
 ## Speed Test Results
 Below is our results on v100.
+### 1. Compared with larger models
+#### 1.1 Inference Speed
 
 | method - backbone     | params (m) | MACs(G) | time/image (ms)     |  
 |-----------------------|------------|---------|---------------------|
+| ccnet                 | 71.271     | 365.174 | 51.0275             |
 | fcn - resnet50        | 32.948     | 162.419 | 22.8495             |
 | fcn - resnet101       | 51.94      | 253.581 | 39.4119             |
 | deeplab - resnet50    | 39.634     | 192.005 | 32.7095             |
-| deeplab - resnet101   | 58.626     | 283.168 | 49.1682             |                 
+| deeplab - resnet101   | 58.626     | 283.168 | 49.1682             | 
+| **RGA_NB (ours)**     | 3.413      | 7.854   | 7.5080              |
+
+#### 1.2 Visualization
+|                       | 000009-0 | 000044-0 | 000574-1 | 001164-1 |
+|-----------------------|--------|--------|--------|--------|
+| color input           |![](images/000009-0.png)        |![](images/000044-0.png)        |![](images/000574-1.png)        |![](images/001164-1.png)        |
+| ground truth          |![](images/gt_000009-0.png)     |![](images/gt_000044-0.png)     |![](images/gt_000574-1.png)     |![](images/gt_001164-1.png)     |
+| CCNet                 |![](images/ccnet_2.png)         |![](images/ccnet_9.png)         |![](images/ccnet_115.png)       |![](images/ccnet_233.png)        |
+| fcn - resnet50        |![](images/FCN_resnet50_2.png)  |![](images/FCN_resnet50_9.png)  |![](images/FCN_resnet50_115.png)|![](images/FCN_resnet50_233.png) |
+| fcn - resnet101       |![](images/FCN_resnet101_2.png) |![](images/FCN_resnet101_9.png) |![](images/FCN_resnet101_115.png)|![](images/FCN_resnet101_233.png)  |
+| deeplab - resnet50    |![](images/DeepLabv3_resnet50_2.png)  |![](images/DeepLabv3_resnet50_9.png)  |![](images/DeepLabv3_resnet50_115.png)  |![](images/DeepLabv3_resnet50_233.png)  |
+| deeplab - resnet101    |![](images/Deeplabv3_resnet101_2.png)  |![](images/Deeplabv3_resnet101_9.png)  |![](images/Deeplabv3_resnet101_115.png)  |![](images/Deeplabv3_resnet101_233.png)  |
+| **RGA_NB (ours)**      |![](images/RGANet_NB_2.png)    |![](images/RGANet_NB_9.png)  |![](images/RGANet_NB_115.png)      |![](images/RGANet_NB_233.png)        |
+
+
+### 2. Compared with smaller models
+#### 2.1 Inference Speed
+| method - backbone     | params (m) | MACs(G) | time/image (ms)     |  
+|-----------------------|------------|---------|---------------------|
 | deeplab - mobilenetv2 | 4.119      | 5.786   | 2.9170              |
-| deeplab - mobilenetv3 | 11.02      | 11.578  | 3.3111              |
-| ccnet                 | 71.271     | 365.174 | 51.0275             |
-| RGA_NB                | 3.413      | 7.854   | 7.5080              |
 | DDRNet-23-slim        | 5.6949     | 5.350   | 1.2294              |
 | HRnet-w18-small-v1    | 1.5370     | 4.873   | 1.8449              |
 | HarDNet               | 4.1185     | 5.165   | 1.6298              |
 | ShelfNet18            | 14.5731    | 14.590  | 2.0605              |
 | STDC1                 | 14.232     | 27.422  | 2.4507              |
+| **RGA_NB (ours)**     | 3.413      | 7.854   | 7.5080              |
 
-## Visualization
+#### 2.2 Visualization
+|                       | 000009-0 | 000044-0 | 000574-1 | 001164-1 |
+|-----------------------|--------|--------|--------|--------|
+| color input           |![](images/000009-0.png)        |![](images/000044-0.png)        |![](images/000574-1.png)        |![](images/001164-1.png)        |
+| ground truth          |![](images/gt_000009-0.png)     |![](images/gt_000044-0.png)     |![](images/gt_000574-1.png)     |![](images/gt_001164-1.png)     |
+| deeplabv3 mobilenetv2 |![](images/deeplabv3_mobilenetv2_2.png) |![](images/deeplabv3_mobilenetv2_9.png)    |![](images/deeplabv3_mobilenetv2_115.png)       |![](images/deeplabv3_mobilenetv2_233.png)        |
+| DDRNet-23-slim        |![](images/DDRNet_2.png) |![](images/DDRNet_9.png) |![](images/DDRNet_115.png)|![](images/DDRNet_233.png)  |
+| HRnet-w18-small-v1    |![](images/HRNet_2.png)  |![](images/HRNet_9.png)  |![](images/HRNet_115.png)  |![](images/HRNet_233.png)  |
+| HarDNet               |![](images/HARDNet_2.png)  |![](images/HARDNet_9.png)  |![](images/HARDNet_115.png)  |![](images/HARDNet_233.png)  |
+| ShelfNet18            |![](images/ShelfNet_2.png)  |![](images/ShelfNet_9.png)  |![](images/ShelfNet_115.png)  |![](images/ShelfNet_233.png)  |
+| STDC1                 |![](images/stdc_2.png)  |![](images/stdc_9.png)  |![](images/stdc_115.png)  |![](images/stdc_233.png)  |
+| **RGA_NB (ours)**      |![](images/RGANet_NB_2.png)    |![](images/RGANet_NB_9.png)  |![](images/RGANet_NB_115.png)      |![](images/RGANet_NB_233.png)        |
 
 
 ## Reference
