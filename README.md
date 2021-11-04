@@ -37,7 +37,7 @@ sh run_test.sh
 ```
 
 ## Speed Test Results
-Below is our results on v100.
+Below are our results on v100.
 ### 1. Compared with larger models
 #### 1.1 Inference Speed
 
