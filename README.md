@@ -1,4 +1,4 @@
-###  **This repo is to evaluate inference speed of RGANet and other segmentation algorithms on Suction Dataset and present their qualitative results. Official RGANet-NB runtime test demo can be found** [here](https://github.com/dunknowcoding/RGANet-test).
+###  **This repo is to evaluate inference speed of RGANet and other segmentation algorithms on Suction Dataset and present their qualitative results. Official RGANet codes can be found** [here](https://github.com/dunknowcoding/RGANet.git).
 
 ## Dataset
 * Download [Suction dataset](http://arc.cs.princeton.edu)
