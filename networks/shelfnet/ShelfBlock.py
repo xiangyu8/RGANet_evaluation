@@ -1,8 +1,7 @@
 import torch
 import torch.nn.functional as F
 import torch.nn as nn
-from torch.nn import BatchNorm2d
-#from modules.bn import InPlaceABNSync
+from inplace_abn import InPlaceABNSync as BatchNorm2d
 drop = 0.1
 
 def conv3x3(in_planes, out_planes, stride=1):
